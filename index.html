@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotation Guidelines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <!-- <a href="index.html">Home</a> -->
+        <!-- <a href="second.html">Second Article</a> -->
+        <a> Annotation Guidelines </a>
+    </nav>
+
+    <!-- Body of the website -->
+    <article>
+        <h1>Argumentation Mining in News Articles Related to the War Between Ukraine and Russia </h1>
+        <p>The purpose of this annotation task is to identify <b>claims and premises</b> in news articles related to the war between Ukraine and Russia, as well as the relations between them. We define this concepts below.</p>
+
+        <h2 id="definitions">Argument Mining Definitions</h2>
+
+        <p>In this section, we provide definitions of the concepts related to this annotation task along with examples to illustrate them.</p>
+
+        <p>Consider Example 1, which presents an argument about the military aid to Ukraine.
+        The writer argues whether the international community should increase military aid to Ukraine, providing reasons in favor and against this claim.</p>
+
+        <!-- Example 1 -->
+        <div class="example-box">
+            <b>Example 1.</b>
+            <p>While some argue that increased military aid to Ukraine is essential, as it helps them defend their sovereignty against Russian aggression, others caution that such support could lead to a dangerous escalation of the conflict.
+            Providing Ukraine with advanced weaponry, they claim, serves as a deterrent, discouraging further Russian advances.
+            However, critics warn that more aid might provoke Russia to retaliate more aggressively, potentially drawing NATO members into direct conflict.
+            Nonetheless, proponents believe that a strong response is necessary because failure to support Ukraine might embolden other authoritarian regimes.</p>
+        </div>
+
+        <h3>Elementary Discourse Units (EDU)</h3>
+        <p>To identify the different components in an argument we need to divide the text in segments called EDUs.
+        An EDU is a self-contained unit of text that conveys a single coherent piece of information.
+        EDUs can be a full sentence or a sentence's clause.</p>
+
+        <p>Example 2 delimits the EDUs between square brackets.
+        Note that <strong>not all parts of text have to be part of an EDU</strong>.
+        Punctuation marks, conjunctions, and transitional words are often excluded since they don't belong to one segment or another.
+        This is the case for the words <em>"while", "as", "however", "nonetheless", and "because"</em> in Example 2.
+        Also, pieces of text that state indirect speech can be excluded.
+        For instance, the phrases <em>"some argue that", "others caution that", and "proponents believe that"</em> are not part of the EDUs in Example 2.
+        An exception is the phrase <em>"they claim"</em> in <em>"Providing Ukraine with advanced weaponry, they claim, serves as a deterrent"</em>.
+        This phrase is part of the EDU because leaving it out would split the EDU in two parts that do not convey a coherent meaning.</p>
+
+        <!-- Example 2 -->
+        <div class="example-box">
+            <strong>Example 2.</strong>
+            <p>While some argue that <b>[increased military aid to Ukraine is essential]</b>, as <b>[it helps them defend their sovereignty against Russian aggression]</b>, others caution that such <b>[support could lead to a dangerous escalation of the conflict]</b>.
+            <b>[Providing Ukraine with advanced weaponry, they claim, serves as a deterrent]</b>, <b>[discouraging further Russian advances]</b>.
+            However, critics warn that <b>[more aid might provoke Russia to retaliate more aggressively]</b>, <b>[potentially drawing NATO members into direct conflict]</b>.
+            Nonetheless, proponents believe that <b>[a strong response is necessary]</b> because <b>[failure to support Ukraine might embolden other authoritarian regimes]</b>.</p>
+        </div>
+
+        <h3>Argument Components</h3>
+        <p>There are two types of components in an argument:</p>
+        <ul>
+            <li><strong>Claim:</strong> A claim is a statement that the speaker or writer wants the audience to accept.</li>
+            <li><strong>Premise:</strong> A premise is a reason or piece of evidence that the arguer puts forward to persuade the audience to accept or refute a statement.
+            Premises form the basis upon which the conclusion (i.e., claim) is built.
+            A premise can correspond to facts, statistics, quotations, reports, examples, findings, physical evidence, or other reasoning methods</li>
+        </ul>
+
+        <p>
+        In this study EDUs must be annotated as a claim or a premise.
+        Therefore a sentence can contain several argument components.
+        Claims and premises do not overlap, a piece of text can be annotated as a claim or a premise, but not both at the same time.
+        Also, sometimes an EDU does not present a stance, assertion, or justification related to any argument, in this cases the EDU should not be annotated as a claim or a premise.
+        This is usually the case, in the context of news articles, for the questions posed by the journalist to an interviewee.
+        </p>
+
+        <p>Example 3 shows the claims and premises in the argument.</p>
+
+        <!-- Example 3 -->
+        <div class="example-box">
+            <strong>Example 3.</strong>
+            <span class="claim">Claim</span>
+            <span class="premise">Premise</span>
+            <p>While some argue that <span class="claim">[increased military aid to Ukraine is essential]</span>, as <span class="premise">[it helps them defend their sovereignty against Russian aggression]</span>, others caution that such <span class="claim">[support could lead to a dangerous escalation of the conflict]</span>.
+            <span class="premise">[Providing Ukraine with advanced weaponry, they claim, serves as a deterrent]</span>, <span class="premise">[discouraging further Russian advances]</span>.
+            However, critics warn that <span class="premise">[more aid might provoke Russia to retaliate more aggressively]</span>, <span class="premise">[potentially drawing NATO members into direct conflict]</span>.
+            Nonetheless, proponents believe that <span class="claim">[a strong response is necessary]</span> because <span class="premise">[failure to support Ukraine might embolden other authoritarian regimes]</span>.</p>
+        </div>
+
+        <p>
+        There are indicators that can help to identify claims and premises.
+        For instance, claims can be introduced by phrases such as "I believe", "I think", "I am in favor of", "I do not believe", "for this reason", "however", "nonetheless", and "so".
+        This is the case of the phrase "<b>Nonetheless</b>, proponents believe that a strong response is necessary" in Example \ref{ex:claims_premises}.
+        Premises can be introduced by phrases such as "because", "for example", "since".
+        This is the case of the phrase "a strong response is necessary <b>because</b> failure to support Ukraine might embolden other authoritarian regimes" in the example.
+        This is not an exhaustive list, other indicators can be used to identify claims and premises.
+        Also, claims and premises can be introduced without any indicator.
+        </p>
+
+        <p>
+        An argument can contain multiple premises linked to a claim.
+        A premise does not exist in isolation, it is always supporting or attacking a claim or premise, while a claim can exist without any premises.
+        The claim can appear at the beginning, at the end, or in the middle of the argument.
+        For instance, an argument can follow these structures:
+        </p>
+
+        <ul>
+            <li>Premise, premise, premise, therefore Claim</li>
+            <div class="example-box">
+                <strong>Example 4.</strong>
+                <p><span class="premise">The ongoing conflict has resulted in severe civilian casualties</span>, and <span class="premise">has caused international trade disruptions</span>; therefore, <span class="claim">a diplomatic resolution is urgently needed</span>.</p>
+            </div>
+            <li>Claim because Premise</li>
+            <div class="example-box">
+                <strong>Example 5.</strong>
+                <p><span class="claim">Ukraine deserves international support</span> because <span class="premise">it is defending its sovereignty against aggression</span>.</p>
+            </div>
+            <li>In my judgment, Claim</li>
+            <div class="example-box">
+                <strong>Example 6.</strong>
+                <p>In my judgment, <span class="claim">further sanctions on Russia will be ineffective at changing its actions in Ukraine</span>.</p>
+            </div>
+
+        </ul>
+
+
+        <h3>Argument Relations</h3>
+        <p>Argument relations describe the connections between different elements within an argument or between multiple arguments.
+        We consider two main types of argument relations:</p>
+        <ul>
+            <li><strong>Support:</strong> A support relation exists between two elements when one element provides evidence, reasons, or justifications for the other element.</li>
+            <li><strong>Attack:</strong> An attack relation exists between two elements when one element challenges or contradicts the other element.</li>
+        </ul>
+
+        <p>
+        Both relations can exist between: (i) a premise and another premise, (ii) a premise and a claim, or (iii) a claim and another claim.
+        Argument relations have a directionality, where the source component is a reason for or refutation of the target component.
+        In this study, we consider that a text segment can have a maximum of one outgoing relation.
+        That is, a segment can support or attack at most one other segment.
+        However, a segment can be supported or attacked by multiple segments.
+        When in doubt, the annotator should consider the most relevant relation.
+        </p>
+
+        <p>
+        A premise does not exist in isolation, it is always supporting or attacking a claim or premise, while a claim can exist without having a relation with other elements.
+        </p>
+
+        <p>
+        The next figure shows the relations between claims and premises in the argument.
+        Notice that C1 is supported or attacked by many other segments.
+        However, all segments only support or attack at most one other segment.
+        </p>
+
+        <img src="latex_related/didactic_example.svg" alt="ex-didactic">
+
+        <h2 id="annotation-process">Annotation Process</h2>
+
+        <p>
+        For each annotation task, the annotator will be presented with a segment of text from a news article.
+        Follow the steps below in strict order to ensure a consistent annotation process:
+        </p>
+
+        <ul>
+            <li><b>Familiarize with the text:</b> Begin by reading each paragraph in its entirety before identifying claims and premises. </li>
+            <li><b>Annotate Claims:</b> After reading the paragraph, identify and annotate any claims.</li>
+            <li><b>Annotate Premises:</b> Proceed to identify and annotate premises.</li>
+            <li><b>Annotate Premises' Relations:</b> Link premises to claims or other premises, assigning each link as either a support or attack relation.
+            All premises should be linked to a claim or another premise.</li>
+            <li><b>Annotate Claim's Relations:</b> Lastly, link claims to other claims within the same paragraph or in the previous paragraphs, assigning each link as either a support or attack relation.
+            <b>Not</b> all claims need to be linked to other elements. </li>
+        </ul>
+
+        <p>
+        <b>Remember:</b> Each segment annotated as claim or premise should independently convey a meaning.
+        The segment can be a full sentence or a clause.
+        If the segment does not present a stance, assertion, or justification related to any argument, it should <b>not</b> be annotated as a claim or a premise.
+        A paragraph could contain only claims, only premises, or a mix of both.
+        </p>
+
+        <h2 id="examples">Examples of Annotation</h2>
+
+        <p>
+        Below are examples of annotated arguments.
+        In all cases <span class="claim">[claims]</span> are highlighted in blue and <span class="premise">[premises]</span> are highlighted in yellow.
+        </p>
+
+        <div class="example-box">
+            <strong>Example 7.</strong>
+            <p><b>Journal: radiofrance. Article: "Guerre en Ukraine : histoire d'une nation menacée. Avec Jacques Rupnik et Ioulia Shukan." Date: 25 February 2022.</b></p>
+
+            <p>La construction de la nation ukrainienne.</p>
+
+            <p>L'Ukraine comme nation factice est-il un thème de rhétorique neuf chez Vladimir Poutine?</p>
+
+            <p>
+            <span class="claim">[Ce n'est pas un thème neuf]</span>. <span class="claim">[Vladimir Poutine a déjà cherché à reconstruire l'histoire ukrainienne et à nous offrir une interprétation très partiale de ce pays]</span>. <span class="claim">[Tout discours sur l'historique de la construction nationale justifie nécessairement les objectifs du présent]</span>. Ioulia Shukan
+            </p>
+
+            <p>
+            <span class="premise">[La propagande russe diffuse une carte géographique où l'Ukraine serait réduite à un petit centre]</span>. Qu'en est-il de cette construction de la nation ukrainienne?
+            </p>
+
+            <p>
+            <span class="premise">[Pour revenir à l'histoire de la construction nationale ukrainienne, cette carte n'évoque pas la période du début des années 1917-1918 où un Etat ukrainien indépendant, la République populaire d'Ukraine, se proclame en mars 1918]</span>. Face à <span class="premise">[la création de cette nouvelle entité étatique, qui s'appuie sur une tradition à la fois intellectuelle et politique, et un travail de reconstruction d'une langue ukrainienne moderne à partir des patois, les bolchéviques sont obligés de créer eux aussi leur propre République socialiste d'Ukraine]</span>. (...) <span class="premise">[Toutes ces années de la guerre civile, les frontières sont mouvantes]</span>. <span class="premise">[Il y a d'autres changements de territoire en amont et en aval de la Seconde Guerre Mondiale]</span>. <span class="claim">[Tous les états soviétiques, y compris la Russie, sont le produit de ces évènements historiques]</span>. <span class="claim">[Vladimir Poutine veut le nier]</span>. Ioulia Shukan.
+            </p>
+
+        </div>
+
+        <p>
+        Notice that the first sentence "La construction de la nation ukrainienne" does not independently convey meaning, therefore it cannot be considered a claim or a premise.
+        Also, the second sentence is a question which conveys meaning by itself, however it does not present a stance, assertion, or justification related to any argument.
+        </p>
+
+        In the next figure, notice that in this case there are no attacks.
+        Also, there are 2 structures: one contains C4, P3, P4, and P5, and the other contains the rest of the claims and premises.
+
+        <img src="latex_related/radiofrance_example.svg" alt="ex-radiofrance">
+
+        <div class="example-box">
+            <strong>Example 8.</strong>
+            <p><b>Journal: France 24. Article: "Face au voisin russe, la neutralité de la Finlande à l'épreuve de la guerre en Ukraine." Date: 18 March 2022.</b></p>
+
+            <p>
+            Impensable il y a vingt ans, <span class="claim">[l'adhésion de la Finlande à l'Otan devient un scénario de plus en plus crédible]</span>. <span class="premise">[Un bouleversement de la politique extérieure de ce pays nordique qui a longtemps soigneusement évité la confrontation avec son voisin russe]</span>.
+            </p>
+
+            <p>
+            <span class="claim">[C'est un basculement historique de l'opinion publique finlandaise]</span>. <span class="premise">[Selon un sondage publié cette semaine, 62 \% de la population se dit favorable à rejoindre l'Otan]</span>. <span class="premise">[Il y a deux semaines, une autre enquête avait pour la première fois donné une majorité absolue (53 \%) à cette adhésion à l'alliance militaire occidentale, soit un bond de près de 25 points, après l'invasion russe de l'Ukraine]</span>.
+            </p>
+
+            <p>
+            <span class="claim">[Au sein de la classe politique, le débat est ouvert et la question de la sacro-sainte neutralité finlandaise apparaît de plus en plus secondaire dans le contexte sécuritaire actuel]</span>. <span class="premise">[Dès le début de l'attaque menée par Vladimir Poutine, la Première ministre Sanna Marin avait annoncé qu'elle allait fournir des armes à l'Ukraine, du jamais vu pour ce pays nordique, militairement non aligné mais membre de l'Union européenne]</span>.
+            </p>
+
+        </div>
+
+        <img src="latex_related/france24_example.svg" alt="ex-france24">
+
+    </article>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
