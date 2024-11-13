@@ -98,3 +98,8 @@ img {
         font-size: 1em;
     }
 }
+
+video {
+    background-color: transparent;
+    border: none;
+}
