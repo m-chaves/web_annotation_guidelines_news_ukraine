@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annotation Guidelines</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+    <div class="floating-menu">
+        Sections
+        <a href="#sec-definitions">1. Argument Mining Definitions</a>
+        <a href="#subsec-EDU">- Elementary Discourse Units</a>
+        <a href="#subsec-argumentcomponents">- Argument Components</a>
+        <a href="#subsec-argumentrelations">- Argument Relations</a>
+        <a href="#sec-text_genres">2. Text Genres</a>
+        <a href="#sec-annotation-process">3. Annotation Process</a>
+        <a href="#sec-annotation-tool">4. The Annotation Tool</a>
+        <a href="#sec-examples">5. (More) Examples of Annotation</a>
+    </div>
+
     <nav>
         <!-- <a href="index.html">Home</a> -->
         <!-- <a href="second.html">Second Article</a> -->
@@ -18,7 +33,7 @@
         <h1>Argumentation Mining in News Articles Related to the War Between Ukraine and Russia </h1>
         <p>The purpose of this annotation task is to identify <b>claims and premises</b> in news articles related to the war between Ukraine and Russia, as well as the relations between them. We define this concepts below.</p>
 
-        <h2 id="definitions">Argument Mining Definitions</h2>
+        <h2 id="sec-definitions">Argument Mining Definitions</h2>
 
         <p>In this section, we provide definitions of the concepts related to this annotation task along with examples to illustrate them.</p>
 
@@ -26,7 +41,7 @@
         The writer argues whether the international community should increase military aid to Ukraine, providing reasons in favor and against this claim.</p>
 
         <!-- Example 1 -->
-        <div class="example-box">
+        <div class="example-box" id="ex-argument">
             <b>Example 1.</b>
             <p>While some argue that increased military aid to Ukraine is essential, as it helps them defend their sovereignty against Russian aggression, others caution that such support could lead to a dangerous escalation of the conflict.
             Providing Ukraine with advanced weaponry, they claim, serves as a deterrent, discouraging further Russian advances.
@@ -34,7 +49,7 @@
             Nonetheless, proponents believe that a strong response is necessary because failure to support Ukraine might embolden other authoritarian regimes.</p>
         </div>
 
-        <h3>Elementary Discourse Units (EDU)</h3>
+        <h3 id="subsec-EDU">Elementary Discourse Units (EDUs)</h3>
         <p>To identify the different components in an argument we need to divide the text in segments called EDUs.
         An EDU is a self-contained unit of text that conveys a single coherent piece of information.
         EDUs can be a full sentence or a sentence's clause.</p>
@@ -49,7 +64,7 @@
         This phrase is part of the EDU because leaving it out would split the EDU in two parts that do not convey a coherent meaning.</p>
 
         <!-- Example 2 -->
-        <div class="example-box">
+        <div class="example-box" id="ex-EDU">
             <strong>Example 2.</strong>
             <p>While some argue that <b>[increased military aid to Ukraine is essential]</b>, as <b>[it helps them defend their sovereignty against Russian aggression]</b>, others caution that such <b>[support could lead to a dangerous escalation of the conflict]</b>.
             <b>[Providing Ukraine with advanced weaponry, they claim, serves as a deterrent]</b>, <b>[discouraging further Russian advances]</b>.
@@ -57,7 +72,7 @@
             Nonetheless, proponents believe that <b>[a strong response is necessary]</b> because <b>[failure to support Ukraine might embolden other authoritarian regimes]</b>.</p>
         </div>
 
-        <h3>Argument Components</h3>
+        <h3 id="subsec-argumentcomponents">Argument Components</h3>
         <p>There are two types of components in an argument:</p>
         <ul>
             <li><strong>Claim:</strong> A claim is a statement that the speaker or writer wants the audience to accept.</li>
@@ -77,7 +92,7 @@
         <p>Example 3 shows the claims and premises in the argument.</p>
 
         <!-- Example 3 -->
-        <div class="example-box">
+        <div class="example-box" id="ex-argumentcomponents">
             <strong>Example 3.</strong>
             <span class="claim">Claim</span>
             <span class="premise">Premise</span>
@@ -124,7 +139,7 @@
         </ul>
 
 
-        <h3>Argument Relations</h3>
+        <h3 id="subsec-argumentrelations">Argument Relations</h3>
         <p>Argument relations describe the connections between different elements within an argument or between multiple arguments.
         We consider two main types of argument relations:</p>
         <ul>
@@ -153,7 +168,30 @@
 
         <img src="latex_related/didactic_example.svg" alt="ex-didactic">
 
-        <h2 id="annotation-process">Annotation Process</h2>
+        <h2 id="sec-text_genres">Text genres and their argumentative structure</h2>
+
+        <p>News articles can take various forms, each with distinct argumentative patterns.
+            Here we outline some common types of news articles that you may encounter in this annotation task.
+            Understanding these genres can help you better identify and interpret argumentative components within the text.
+            Note that this list is not exhaustive, and genres often overlap, that is, a single article can incorporate elements from multiple genres.
+            At the end of guidelines we provide examples of each genre.
+        </p>
+
+        <ol>
+            <li><strong>Classic News Reporting:</strong> This genre focuses on delivering factual information about recent events. As a result, these articles are less likely to contain argumentative components. When annotating, focus on identifying factual claims and premises that support them.
+                <a href="#ex-france24">Example 8</a> provides a case of this genre with a strong argumentative structure, while <a href="#ex-franceculture_newsreporting">Example 11</a> is a more straightforward example of classic news reporting. </li>
+            <li><strong>Analysis of Commentary:</strong>These articles offer interpretations of events, provide deeper insights, or express opinions. They are rich in argumentative components and often reflect the author's perspective on the issue. There are two main variants:</li>
+            <ul>
+                <li><strong>Contrastive (Two-sided):</strong> It presents arguments from multiple sides of an issue, allowing for support and attack relations between claims. For example, a piece might present Russia's viewpoint on the conflict, followed by an analysis of Ukraine's perspective, with the author drawing connections or highlighting contradictions. <a href="#ex-argumentcomponents"> Example 3</a> is an instance of this genre.</li>
+                <li><strong>Viewpoint (One-sided):</strong>It presents only one perspective, focusing on the support relations. The author will likely provide reasoning and evidence to back up the main claims, but the article will not contain many counterarguments or attack relations. <a href="#ex-lerubicon">Example 10</a> illustrates this genre.</li>
+            </ul>
+            <li><strong>Interview:</strong> The text is typically structured in a question-answer format. The questions rarely contain argument components, as they are not assertions nor do they provide pieces of evidence related to other parts of the text. However, answers provided by the interviewee often contain claims and premises. These answers may also present supporting or opposing arguments, particularly when discussing controversial or complex topics. <a href="#ex-radiofrance">Example 7</a> is an instance of this genre.</li>
+            <li><strong>Narrative (Experiences):</strong> This type of writing tends to focus on storytelling rather than argumentation. As a result, it rarely contains claims or premises. However, narratives can serve as a source of evidence or examples for a claim. <a href="#ex-franceculture_narrative">Example 12</a> is an instance of this genre.</li>
+            <li><strong>Speeches:</strong> Speeches, whether political or ceremonial, are designed to persuade or inform an audience. They are often rich in support relations. Sometimes speeches also engage with opposing views, for instance when the speaker quotes an opponent's argument to refute it. In these texts, look for clear claims and the reasoning that supports them, often tied to a particular goal or agenda. <a href="#ex-legrandcontinent">Example 9</a> illustrates this genre.</li>
+
+        </ol>
+
+        <h2 id="sec-annotation-process">Annotation Process</h2>
 
         <p>
         For each annotation task, the annotator will be presented with a segment of text from a news article.
@@ -177,7 +215,7 @@
         A paragraph could contain only claims, only premises, or a mix of both.
         </p>
 
-        <h2 id="annotation-tool">The Annotation Tool</h2>
+        <h2 id="sec-annotation-tool">The Annotation Tool</h2>
 
         <p>
         The annotation tool is based on Label Studio.
@@ -195,7 +233,7 @@
             <li>Watch the following video to see how to do the annotations in the platform</li>
         </ol>
 
-        <video width="100%" height="auto" controls>
+        <video width="100%" height="auto" controls poster="images/cover_label_studio_tutorial.png">
             <source src="images/Label_Studio_Demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -203,14 +241,15 @@
 
 
 
-        <h2 id="examples">Examples of Annotation</h2>
+        <h2 id="sec-examples">(More) Examples of Annotation</h2>
 
         <p>
         Below are examples of annotated arguments.
         In all cases <span class="claim">[claims]</span> are highlighted in blue and <span class="premise">[premises]</span> are highlighted in yellow.
+        In the figures, support relations are shown with green arrows, while attack relations are shown with red arrows.
         </p>
 
-        <div class="example-box">
+        <!-- <div class="example-box" id="ex-radiofrance">
             <strong>Example 7.</strong>
             <p><b>Journal: radiofrance. Article: "Guerre en Ukraine : histoire d'une nation menacée. Avec Jacques Rupnik et Ioulia Shukan." Date: 25 February 2022.</b></p>
 
@@ -230,6 +269,25 @@
             <span class="premise">[Pour revenir à l'histoire de la construction nationale ukrainienne, cette carte n'évoque pas la période du début des années 1917-1918 où un Etat ukrainien indépendant, la République populaire d'Ukraine, se proclame en mars 1918]</span>. Face à <span class="premise">[la création de cette nouvelle entité étatique, qui s'appuie sur une tradition à la fois intellectuelle et politique, et un travail de reconstruction d'une langue ukrainienne moderne à partir des patois, les bolchéviques sont obligés de créer eux aussi leur propre République socialiste d'Ukraine]</span>. (...) <span class="premise">[Toutes ces années de la guerre civile, les frontières sont mouvantes]</span>. <span class="premise">[Il y a d'autres changements de territoire en amont et en aval de la Seconde Guerre Mondiale]</span>. <span class="claim">[Tous les états soviétiques, y compris la Russie, sont le produit de ces évènements historiques]</span>. <span class="claim">[Vladimir Poutine veut le nier]</span>. Ioulia Shukan.
             </p>
 
+        </div> -->
+
+
+        <div class="example-box" id="ex-radiofrance">
+            <strong>Example 7.</strong>
+            <p><b>Journal: radiofrance. Article: "War in Ukraine: The History of a Threatened Nation. With Jacques Rupnik and Ioulia Shukan.'' Date: 25 February 2022. Translation from the original article in French.</b></p>
+
+            <p><b>Text genre: Interview.</b></p>
+
+            <p>The construction of the Ukrainian nation.</p>
+
+            <p>Is Ukraine as a fictitious nation a new rhetorical theme for Vladimir Putin?</p>
+
+            <p><span class="claim">[It is not a new theme]</span>. <span class="claim">[Vladimir Putin has already sought to reconstruct Ukrainian history and present us with a very biased interpretation of this country]</span>. <span class="claim">[Any discourse on the history of national construction necessarily justifies the goals of the present]</span>. Ioulia Shukan</p>
+
+            <p><span class="premise">[Russian propaganda is spreading a map where Ukraine is reduced to a small central region]</span>. What about this construction of the Ukrainian nation?</p>
+
+            <p><span class="premise">[To return to the history of Ukrainian national construction, this map does not mention the period of the early years of 1917-1918 when an independent Ukrainian state, the Ukrainian People's Republic, was proclaimed in March 1918]</span>. Faced with <span class="premise">[the creation of this new state entity, which relied on both an intellectual and political tradition, and the effort to reconstruct a modern Ukrainian language from dialects, the Bolsheviks were also forced to create their own Ukrainian language from dialects, the Bolsheviks were also forced to create their own Ukrainian Soviet Socialist Republic]</span>. (...) <span class="premise">[Throughout these years of civil war, the borders were shifting]</span>. <span class="premise">[There were other territorial changes before and after the Second World War]</span>. <span class="claim">[All Soviet states, including Russia, are the product of these historical events]</span>. <span class="claim">[Vladimir Putin wants to deny this]</span>. Ioulia Shukan</p>
+
         </div>
 
         <p>
@@ -242,7 +300,7 @@
 
         <img src="latex_related/radiofrance_example.svg" alt="ex-radiofrance">
 
-        <div class="example-box">
+        <!-- <div class="example-box" id="ex-france24">
             <strong>Example 8.</strong>
             <p><b>Journal: France 24. Article: "Face au voisin russe, la neutralité de la Finlande à l'épreuve de la guerre en Ukraine." Date: 18 March 2022.</b></p>
 
@@ -258,9 +316,83 @@
             <span class="claim">[Au sein de la classe politique, le débat est ouvert et la question de la sacro-sainte neutralité finlandaise apparaît de plus en plus secondaire dans le contexte sécuritaire actuel]</span>. <span class="premise">[Dès le début de l'attaque menée par Vladimir Poutine, la Première ministre Sanna Marin avait annoncé qu'elle allait fournir des armes à l'Ukraine, du jamais vu pour ce pays nordique, militairement non aligné mais membre de l'Union européenne]</span>.
             </p>
 
+        </div> -->
+
+        <div class="example-box" id="ex-france24">
+            <p><strong>Example 8.</strong>
+            <p><b>Journal: France 24. Article: "Facing the Russian Neighbor, Finland's Neutrality Put to the Test by the War in Ukraine." Date: 18 March 2022. Translation from the original article in French.</b></p>
+
+            <p><b>Text genre: Classic news reporting.</b></p>
+
+            <p>Unthinkable twenty years ago, <span class="claim">[Finland's accession to NATO is becoming an increasingly credible scenario]</span>. <span class="premise">[A shift in the foreign policy of this Nordic country that has long carefully avoided confrontation with its Russian neighbor]</span>.</p>
+
+            <p><span class="claim">[It is a historic shift in Finnish public opinion]</span>. <span class="premise">[According to a poll published this week, 62\% of the population is in favor of joining NATO]</span>. <span class="premise">[Two weeks ago, another survey for the first time showed an absolute majority (53\%) in favor of this accession to the Western military alliance, a jump of nearly 25 points following the Russian invasion of Ukraine]</span>.</p>
+
+            <p><span class="claim">[Within the political class, the debate is open, and the question of Finland's sacrosanct neutrality appears increasingly secondary in the current security context]</span>. <span class="premise">[From the start of the attack led by Vladimir Putin, Prime Minister Sanna Marin announced that she would supply weapons to Ukraine, something unprecedented for this Nordic country, militarily non-aligned but a member of the European Union]</span>.</p>
+
         </div>
 
+        Example 8 is a case of <em>classic news reporting</em>. The next figure shows the relations between claims and premises in the argument.
+
         <img src="latex_related/france24_example.svg" alt="ex-france24">
+
+        <div class="example-box" id="ex-legrandcontinent">
+            <strong>Example 9.</strong>
+            <p><b>Journal: Le Grand Continent. Article: "How Putin Wants to Erase Ukraine". Date: 23 February 2022. Translation from the original article in French.</b></p>
+
+            <p><b>Text genre: Speech.</b></p>
+
+            <p>So I'll start with the fact that <span class="claim">[modern Ukraine was created entirely by Russia, or to be more precise by Bolshevik, communist Russia]</span>. <span class="premise">[This process started right after the 1917 revolution]</span>. <span class="premise">[Lenin and his comrades did this in a very painful way for Russia]</span>, <span class="premise">[by separating, tearing away lands that are historically Russian]</span>. <span class="premise">[Nobody asked the opinion of the millions of people who lived there]</span>.</p>
+
+        </div>
+
+        <p> This example contains an extract of a speech by Vladimir Putin.
+        Speeches are usually rich in argument components, and they mostly rely on support relations.
+        See the argumentation structure of Example 9 in the next figure.</p>
+
+        <img src="latex_related/legrandcontinent_example.svg" alt="ex-legrandcontinent">
+
+        <div class="example-box" id="ex-lerubicon">
+            <p><strong>Example 10</strong></p>
+            <p><b>Journal: Le Rubicon. Article: "Ukraine Air War: The Diagoras Problem". Date: 5 August 2022. Translation from the original article in French.</b></p>
+            <p><b>Text genre: Analysis or commentary.</b></p>
+
+            <p>In his best-selling book The Black Swan, Lebanese-American essayist and statistician <span class="premise">[Nassim Nicholas Taleb warns us about our interpretive and confirmation biases, which naturally lead us to focus on pre-selected segments of what we see and generalize them to what we do not see]</span>.</p>
+
+            <p>To illustrate this, <span class="premise">[Taleb tells the story of Diagoras, known as the Atheist, named after a Greek lawgiver, lyric poet, and sophist of the fifth century BCE]</span>. <span class="claim">[When Diagoras was shown painted tablets depicting devout people who had prayed and survived a shipwreck]</span>, <span class="claim">[Diagoras argued against the hasty conclusion that prayer had saved them]</span>. Instead, <span class="premise">[he wondered where the portraits of those who had prayed but died anyway were]</span>.</p>
+
+            <p>At a time when the air war is still raging in Ukraine and continues to surprise Western air experts with its unfolding, <span class="claim">[it is essential to remain sensitive to the Diagoras problem: what we see does not necessarily reflect what we do not see]</span>.</p>
+        </div>
+
+        <p> Note that, overall, Example 10 can be considered an article of the genre of <em>analysis or commentary</em>.
+        However, the second paragraph corresponds to a <em>narrative</em>.
+        This is an example of how different text genres can be present in the same article.
+        Also, it shows how narratives can be used to support claims and premises in an argumentative context.
+        See its argument relations in the next figure.</p>
+
+        <img src="latex_related/lerubicon_example.svg" alt="ex-lerubicon">
+
+        <div class="example-box" id="ex-franceculture_newsreporting">
+            <p><strong>Example 11</strong></p>
+            <p><b>Journal: France Culture. Article: "On Twitter, Anonymous announced that it would not stop cyberattacks against Russia." Date: 25 April 2022. Translation from the original article in French.</b></p>
+            <p><b>Text genre: Classic news reporting.</b></p>
+
+            <p>In March, Anonymous claimed to have hacked more than 35,000 files from the Russian central bank. Then, as reported by the magazine Digital, l'ADN, another account affiliated with Anonymous claims to have hacked more than 500,000 printers throughout Russia at the same time, remotely activating them to print anti-propaganda messages about the Ukrainian conflict.</p>
+        </div>
+
+        <div class="example-box" id="ex-franceculture_narrative">
+            <p><strong>Example 12</strong></p>
+            <p><b>Journal: France Culture. Article: "Damien, foreign volunteer: 'We are all here to liberate Ukraine, whatever our nationality'." Date: 13 March 2022. Translation from the original article in French.</b></p>
+            <p><b>Text genre: Narrative.</b></p>
+
+            <p>It is an external situation that is imposed, that comes from nowhere. And me, in this situation, I had the possibility to leave. I left Kiev a little before the start of the war, on the instructions of our Norwegian embassy, but I could not leave the country. I could not leave Ukraine to its own devices. Without any value judgment on my friends, especially foreign ones, who left. But personally, I could not do it and I stayed in Ukraine.</p>
+        </div>
+
+        <p>Examples 11 and 12 do not contain any argumentative structures.
+        Therefore these examples do not contain any annotations.
+        Example 11 simply presents facts which could be used as premises in an argument, but they are not used as such in this case.
+        Premises cannot exist in isolation, that is, they must be used to support or attack other components of the argument.
+        Similarly, Example 12 is a narrative which states a sequence of events without making any assertion.</p>
 
     </article>
 
