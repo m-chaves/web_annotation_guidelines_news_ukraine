@@ -8,6 +8,7 @@ body {
     background-color: #fff;
     color: #333;
     line-height: 1.6;
+    text-align: justify;
 }
 
 nav {
@@ -71,6 +72,17 @@ img {
     background-color: #e0d8d8;
     font-family: 'Lato', serif;
     font-size: 0.9em;
+    text-align: justify;
+}
+
+.warning-box {
+    border-left: 4px solid #000;
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #ebc341;
+    font-family: 'Lato', serif;
+    font-size: 0.9em;
+    text-align: justify;
 }
 
 /* Custom Colors for Highlighting */
@@ -81,6 +93,11 @@ img {
 
 .premise {
     background-color: #ebc341; /* Light yellow */
+    font-weight: bold;
+}
+
+.edu {
+    background-color: #a0a0a0; /* Gray */
     font-weight: bold;
 }
 
