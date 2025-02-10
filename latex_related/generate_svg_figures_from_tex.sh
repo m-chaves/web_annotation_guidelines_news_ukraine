@@ -1,4 +1,5 @@
-# This script compiles all .tex files in the current directory to svg format
+# This script compiles all .tex files in the CURRENT directory to svg format
+# To run it use ./generate_svg_figures_from_tex.sh
 
 # Check if dvisvgm is installed
 if ! command -v dvisvgm &> /dev/null
