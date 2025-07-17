@@ -101,6 +101,21 @@ img {
     font-weight: bold;
 }
 
+/* Underline text in red */
+u-red {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgb(146, 26, 26); /* safari still uses vendor prefix */
+  text-decoration-color: rgb(146, 26, 26);
+}
+
+/* Underline text in blue */
+u-blue {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgb(27, 30, 173); /* safari still uses vendor prefix */
+  text-decoration-color: rgb(27, 30, 173);
+}
+
+
 .paragraph-title {
     font-weight: bold;
     margin-top: 1em;
